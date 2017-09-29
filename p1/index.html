@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPS with VueJS</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <section class="row">
+    <div class="small-6 columns">
+      <h1 class="text-center">PLAYER</h1>
+      <div class="wins">
+        <div class="wins text-center" style="background-color: green; margin: 0; color: white;" :style="{width: playerWins + '0%'}">
+        {{playerWins}}
+
+        </div>
+      </div>
+    </div>
+    <div class="small-6 columns">
+      <h1 class="text-center">COMPUTER</h1>
+      <div class="wins">
+        <div class="wins text-center"  style="background-color: green; margin: 0; color: white;" :style="{width: computerWins + '0%'}">
+         {{computerWins}}
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="row controls">
+    <div class="small-12 columns">
+      <button @click="show = !show" id="start-game">START NEW GAME</button>
+    </div>
+  </section>
+  <section v-if="!show" class="row controls">
+    <div class="small-12 columns">
+      <button @click="rock" :class="player" id="rock">ROCK</button>
+      <button  @click="paper" :class="player" id="paper">PAPER</button>
+      <button @click="scissors" :class="player" id="scissors">SCISSORS</button>
+      <button @click="restart" :class="player" id="restart">RESTART</button>
+    </div>
+  </section>
+  <section class="row log">
+    <div class="small-12 columns">
+
+      <ul>
+        <li v-for="result in turns" :class="{'player-turn': result.won, 'computer-turn': result.lose, 'tie-turn': result.tied}">
+        {{result.text}}
+
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
