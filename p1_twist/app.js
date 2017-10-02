@@ -157,7 +157,7 @@ new Vue({
                 return alert('Game Over! You won! Restart to play again')
             }
         },
-
+/*If the player beats the prvious high score it changes to the new score*/
         totalScore: function () {
             var highScore = this.hScore;
             var pScore = this.score;
@@ -167,7 +167,7 @@ new Vue({
             }
 
         },
-
+/*if both bets are empty then it is game over*/
         pStart: function(){
             var points = this.bets;
             var plPoints = this.playerBets;
@@ -176,7 +176,7 @@ new Vue({
                 return alert('game over');
             }
         },
-
+/*before the game starts it makes sure the player places a bet*/
         start: function () {
             var points = this.bets;
             if(points <= 0)
@@ -187,7 +187,7 @@ new Vue({
         }
 
       },
-
+/*It will play the game for 9 rounds*/
     computed: {
         rounds: function(){
             var dRounds = this.round;
