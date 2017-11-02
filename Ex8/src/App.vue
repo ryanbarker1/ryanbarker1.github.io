@@ -5,8 +5,8 @@
                 <h1 v-highlight>Directives Exercise</h1>
                 <!-- Exercise -->
                 <!-- Build a Custom Directive which works like v-on (Listen for Events) -->
-                <button :click="rText">Click Me</button>
-                <p>{{rText | highlight}}</p>
+                <button :click.highlight="coloredText">Click Me</button>
+                <p>{{rText}}</p>
 
             </div>
         </div>
@@ -58,6 +58,12 @@
             }
         },
 
+        methods:{
+          coloredText(){
+              return this.rText;
+          }
+        },
+
         components: {
             appText: Text
         },
@@ -68,3 +74,4 @@
 
 <style>
 </style>
+
