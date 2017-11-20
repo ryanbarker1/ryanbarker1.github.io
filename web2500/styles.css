@@ -1,0 +1,61 @@
+.image {
+   
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://source.unsplash.com/nGINcJVf0o0/1500x500');
+    background-size: cover;
+}
+
+.hero {
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.image{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.catalog:hover .image {
+  opacity: 0.3;
+    cursor: pointer;
+}
+
+.catalog:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: gray;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  cursor: pointer;
+}
+
+footer{
+    color: white;
+    font-size: 10px;
+}
+
+/*
+.button{
+   margin-left: 50%
+}*/
