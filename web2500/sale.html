@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="custom.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Assignment 07</title>
+</head>
+<body>
+          <!-- Navigation-->
+   
+    
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+   <span class="pull-left justify-content-between">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarsExampleDefault">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                   
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link text-white">Home</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a href="homes.html" class="nav-link text-white">Retail/Homes</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a href="services.html" class="nav-link text-white">Services</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a href="jobs.html" class="nav-link text-white ">Jobs</a>
+                    </li>
+                </ul>
+            </div>
+        </span>
+            <input type="text" placeholder="search">
+        </div>
+    
+    <!-- Navigation -->
+    <br>
+</nav>
+
+
+<div class="row">
+<div class="image  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="hero">
+  <div class="hero-text">
+   <h1>Ogden Craigslist</h1>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container mt-4 mb-5">
+        <h2 class="display-4 text-center"> For Sale </h2>
+        <hr class="bg-dark mb-4 w-25">
+        <div class="row">
+              <div class="catalog col-xl-4 col-lg-4 col-md-4">
+                <div class="card">
+   <div id="slidecontainer">
+      <input type="range" min="1" max="2000" value="50" class="slider" id="myRange">
+      <p>Value: $<span id="demo"></span></p>
+    </div>
+                   Zip:<input type="text" placeholder="search"><br>
+                    City, State:<input type="text" placeholder="search"><br>
+                   <span class="text-center">
+                    <div class="card-block p-3">
+                         <button class="button btn-primary">Refine Search</button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+              
+              
+               <div class="catalog col-xl-4 col-lg-4 col-md-4">
+                <div class="card">
+                  <img class="image" src="assets/furniture.jpg" alt="">
+                   <span class="text-center">
+                    <div class="card-block p-3">
+                    <div class="middle">
+                       <div class="text">Tables, Couches, Beds, Tv. stands, Desks...</div>
+                      </div>
+                     <button class="button btn btn-primary" >Furniture</button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            
+             <div class="catalog col-xl-4 col-lg-4 col-md-4">
+                <div class="card">
+                  <img class="image" src="assets/elect.jpg" alt="">
+                   <span class="text-center">
+                    <div class="card-block p-3">
+                    <div class="middle">
+                       <div class="text">Computers, Tv., Game console, Speakers...</div>
+                      </div>
+                     <button class="button btn btn-primary" >Electronics</button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+             
+             <div class="catalog col-xl-4 col-lg-4 col-md-4">
+                <div class="card">
+                  <img class="image" src="assets/car.jpg" alt="">
+                   <span class="text-center">
+                    <div class="card-block p-3">
+                    <div class="middle">
+                       <div class="text">Cars, Trucks, SUV, Motorcycles..</div>
+                      </div>
+                     <button class="button btn btn-primary" >Automotive</button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="catalog col-xl-4 col-lg-4 col-md-4">
+               <a href=""></a>
+                <div class="card">
+                  <img class="image" src="assets/sale.jpg" alt="">
+                   <span class="text-center">
+                    <div class="card-block p-3">
+                    <div class="middle">
+                       <div class="text">Microwave, Fridges, Washer, Dryers...</div>
+                      </div>
+                     <button class="button btn btn-primary" >Appliances</button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="catalog col-xl-4 col-lg-4 col-md-4">
+               <a href=""></a>
+                <div class="card">
+                  <img class="image" src="assets/misc.jpg" alt="">
+                   <span class="text-center">
+                    <div class="card-block p-3">
+                    <div class="middle">
+                       <div class="text">Various items...</div>
+                      </div>
+                     <button class="button btn btn-primary" >Misc...</button>
+                    </div>
+                    </span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Card -->
+
+
+<footer class="bg-dark container-fluid text-center">
+    <p>&copy; craigslist help safety privacy feedback cl jobs terms about mobile</p>
+
+ </footer>
+ 
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+</body>
+</html>
